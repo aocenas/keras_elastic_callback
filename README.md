@@ -48,3 +48,26 @@ both elastic and kibana.
 cd keras_elastic_callback
 docker-compose up
 ```
+
+####sample event
+```json
+{
+  "_index": "keras",
+  "_type": "epoch_end",
+  "_id": "APn0Jc-51PX7eQOMsY9_",
+  "_score": null,
+  "_source": {
+    "timestamp": "2017-01-01T12:00:00.000000",
+    "event": "epoch_end",
+    "run_name": "unique_run_name",
+    "val_loss": 1.1312940897511654,
+    "val_acc": 0.6147540983606558,
+    "val_fmeasure": 0.5644596578156362,
+    "loss": 1.2761308617874645,
+    "acc": 0.5825664621676891,
+    "fmeasure": 0.48062274326210375,
+    "duration": 163,
+    "epoch": 0
+  }
+}
+```
